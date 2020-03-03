@@ -31,3 +31,16 @@ const toggleSecondCardStyle = () => {
 const secondCardEditButton = document.getElementsByClassName("btn-group")[1].children[1]
 secondCardEditButton.addEventListener("click", toggleSecondCardStyle)
 const cdnLink = document.getElementsByTagName("link")[0]
+
+//Fonctionnalité 5
+const toggleCdn = () => {
+  cdnLink.disabled ? cdnLink.disabled = false : cdnLink.disabled = true
+}
+const navBar = document.getElementsByClassName("navbar")[0]
+navBar.addEventListener("dblclick", toggleCdn)
+
+const viewButtons = document.querySelectorAll(".btn-group")
+const cardsImages = document.querySelectorAll(".card-img-top")
+const cardsTexts = document.querySelectorAll(".card-text")
+const toggleElementDisplay = (element) => {
+  element.style.display === "none" ? element.style.display = "block" : element.style.display = "none"
